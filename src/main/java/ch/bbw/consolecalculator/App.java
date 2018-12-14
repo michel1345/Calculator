@@ -20,6 +20,7 @@ public class App
     	valueB = 20;
     	System.out.println(calculator.summe(valueA, valueB));
     	System.out.println(calculator.subtraction(valueA, valueB));
+    	System.err.println(calculator.division(valueA, valueB));
 	
     }
 }
