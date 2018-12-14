@@ -6,8 +6,11 @@ public class Calculator {
 		return summand1 + summand2;
 	}
 	
-	public int subtraction(int minuand1, int minuand2) {
-		return minuand1 - minuand2;
+	public int subtraction(int minuend1, int subtrahend2) {
+		return minuend1 - subtrahend2;
 	}
-
+	
+	public double division(double divident, double divisor) {
+		return divident / divisor;
+	}
 }
