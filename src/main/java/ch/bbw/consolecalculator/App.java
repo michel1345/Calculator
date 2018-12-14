@@ -19,6 +19,7 @@ public class App
     	valueA = 10;
     	valueB = 20;
     	System.out.println(calculator.summe(valueA, valueB));
+    	System.out.println(calculator.subtraction(valueA, valueB));
 	
     }
 }
