@@ -23,5 +23,15 @@ public class CalculatorTest {
 	public void testSubtraktionZweiPositiveIsOk() {
 		assertTrue(testee.subtraction(30, 10) == 20);
 	}
+	
+	@Test
+	public void testDivisionZweiPositiveIsOk() {
+		assertTrue(testee.division(50, 10) == 5);
+	}
+	
+	@Test
+	public void testMultiplikationZweiPositiveIsOk() {
+		assertTrue(testee.multiplikation(5, 10) == 50);
+	}
 
 }
