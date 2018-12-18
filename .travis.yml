@@ -2,9 +2,9 @@ language: java
 sudo: false
 script: mvn install
 deploy:
-    provider: realeases
-    api_key: "GITHUB OAUTH TOKEN"
-    file: "FILE TO UPLOAD"
-    skip_cleanup: true
-    on:
-        tags: true
+  provider: releases
+  api_key:
+    secure: wJ/DoceHQ2SoTs1lHIGtX8llsIhcZdUNbHzWtH7MqUMiDbIh1JZI/DpSWYnv/iOTKrB1VLPWz1kkcjqdE+UEw4iISQpPE8qMJkOjjVgk1izHM6W8IcZrEul+S4TB8WxhPZEeuCKRlvgOPHSKv71IR8rmKP0P1FY4WpHVu4yjBw14r9ViaOR8UqXdAMM5YYUdvrMVSgEFjOoiPEbLvnDsJ33I7pVPj35Ju9hfXA2J1vHoyEmuhRwegwdX3cRO/GpCS2UAHjD3IeVyRPc3MUn9dbkBgWFe8uhDs4Bk4bVCwEEyPbyCmlS8SdCJH+PB2FfMDrrrAFkQKw8716hCczY6proTGJnU0pyoY7qcKq5oPLnRPoMF3wObYEsCZZRrDOL03GbPFZ83B5oUAjqrXjeGkVjyUd5JzcMx23+IjyO2z/HLOc+bonTl3AmsQqouZuFWyBX5TJSwdYvAcRpAH5fhGnE5uM2xCin9/6qCko3l9GUnS/n869odkbGLlS85qkzCvZaddlLDODE6gDVcwUYmU2B7yfldRiBsB8OqO8HxS2a60KpDn91N4hDoWeK2d5mMeBbUj0ZlL1Knp8QdpxJxA8wynCQj7Ii7Ypuu4pOCdB5hRjJJF10R8O9G95BC0bnnfOCMXayP+9urKjOkQoYsFDjzFPrrGodLIbMkoNzg9qw=
+  file: "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/0.0.1-"
+  on:
+    repo: michel1345/Calculator
