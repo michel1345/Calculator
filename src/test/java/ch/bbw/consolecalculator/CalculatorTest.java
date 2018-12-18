@@ -60,11 +60,52 @@ public class CalculatorTest {
 	}
 
 	
-	
 	// Subtraktion
 	@Test 
 	public void testSubtraktionZweiPositiveIsOk() {
 		assertTrue(testee.subtraction(30, 10) == 20);
+	}
+	
+	@Test
+	public void testSubtraktionZweiNegativeIsOk() {
+		test = new Calculator();
+		assertTrue(test.subtraction(-7, -6) == -1);
+	}
+
+	@Test
+	public void testSubtraktionPositivUndNegativeIsOk() {
+		test = new Calculator();
+		assertTrue(test.subtraction(10, -5) == 15);
+	}
+
+	@Test
+	public void testSubtraktionZeroIsOk() {
+		test = new Calculator();
+		assertTrue(test.subtraction(5, 5) == 0);
+	}
+
+	@Test
+	public void testSubtraktionMaxValueUndZeroIsOk() {
+		test = new Calculator();
+		assertTrue(test.subtraction(Integer.MAX_VALUE, 0) == 2147483647);
+	}
+
+	@Test
+	public void testSubtraktionMinValueUndZeroIsOk() {
+		test = new Calculator();
+		assertTrue(test.subtraction(Integer.MIN_VALUE, 0) == -2147483648);
+	}
+
+	@Test
+	public void testSubtraktionMaxValueUnd1IsMinValueIsFalse() {
+		test = new Calculator();
+		assertTrue(test.subtraction(Integer.MIN_VALUE, 1) == Integer.MAX_VALUE);
+	}
+
+	@Test
+	public void testSubtraktionMinValueUndMaxValueIsFalse() {
+		test = new Calculator();
+		assertTrue(test.subtraction(Integer.MIN_VALUE, Integer.MAX_VALUE) == 1);
 	}
 	
 	
