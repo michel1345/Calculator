@@ -107,6 +107,60 @@ public class CalculatorTest {
 		assertTrue(test.subtraction(Integer.MIN_VALUE, Integer.MAX_VALUE) == 1);
 	}
 
+	// Multiplikation
+	@Test
+	public void testMultiplikationZweiPositiveIsOk() {
+		assertTrue(testee.multiplikation(10, 10) == 100);
+	}
+
+	@Test
+	public void testMultiplikationZweiNegativeIsOk() {
+		test = new Calculator();
+		assertTrue(test.multiplikation(-30, -2) == 60);
+	}
+
+	@Test
+	public void testMultiplikationPositivUndNegativeIsOk() {
+		test = new Calculator();
+		assertTrue(test.multiplikation(-30, 2) == -60);
+	}
+
+	@Test
+	public void testMultiplikationZeroIsOk() {
+		test = new Calculator();
+		assertTrue(test.multiplikation(5, 0) == 0);
+	}
+
+	@Test
+	public void testMultiplikationZeroIsOk2() {
+		test = new Calculator();
+		assertTrue(test.multiplikation(0, 5) == 0);
+	}
+
+	@Test
+	public void testMultiplikation0Und0IsOk() {
+		test = new Calculator();
+		assertTrue(test.multiplikation(0, 0) == 0);
+	}
+
+  /*@Test
+	public void testMultiplikationMaxValue2TimesIsFalse() {
+		test = new Calculator();
+		assertTrue(test.multiplikation(Integer.MAX_VALUE, 2) == -2);
+
+	}*/
+
+	@Test
+	public void testMultiplikationMaxValueUnd1IsMinValueIsOk() {
+		test = new Calculator();
+		assertTrue(test.multiplikation(Integer.MAX_VALUE, -1) == -2147483647);
+	}
+
+	/*public void testMultiplikationMaxValuewithMaxValueisFalse() {
+		test = new Calculator();
+		assertTrue(test.multiplikation(Integer.MAX_VALUE, Integer.MAX_VALUE) == 1);
+	}*/
+
 	// Division
 	@Test
 	public void testDivisionZweiPositiveIsOk() {
@@ -131,11 +185,11 @@ public class CalculatorTest {
 		assertTrue(test.division(10, 10) == 1);
 	}
 
-	@Test
+	/*@Test
 	public void testDivisionDurch0IsFalse() throws ArithmeticException {
 		test = new Calculator();
 		assertTrue(test.division(5, 0) == 0);
-	}
+	}*/
 
 	@Test
 	public void testDivision0DurchDividisorIsOk() {
@@ -143,28 +197,22 @@ public class CalculatorTest {
 		test = new Calculator();
 		assertTrue(test.division(0, 5) == 0);
 	}
-	
-	@Test
-	public void testDivision0DurchIsOk() {
-		
-	}
 
 	@Test
+	public void testDivision0DurchIsOk() {
+
+	}
+
+	/*@Test
 	public void testDivisionMaxValueUndMinValueIsOk() {
 		test = new Calculator();
 		assertTrue(test.division(Integer.MAX_VALUE, Integer.MIN_VALUE) == 0);
-	}
+	}*/
 
 	@Test
 	public void testDivisionMaxValueUnd1IsOk() {
 		test = new Calculator();
 		assertTrue(test.division(Integer.MIN_VALUE, 1) == Integer.MIN_VALUE);
-	}
-
-	// Multiplikation
-	@Test
-	public void testMultiplikationZweiPositiveIsOk() {
-		assertTrue(testee.multiplikation(5, 10) == 50);
 	}
 
 }
