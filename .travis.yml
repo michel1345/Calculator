@@ -1,6 +1,10 @@
 language: java
 sudo: false
 script: mvn install
+
+before_deploy:
+export TRAVIS_TAG=${TRAVIS_TAG:-$(date +'%Y%m%d%H%M%S')-$(git log --format=%h -1)}
+
 deploy:
   provider: releases
   api_key:
@@ -8,4 +12,4 @@ deploy:
   file: "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/0.0.1-"
   on:
     repo: michel1345/Calculator
-  on.tags: true  
+  
