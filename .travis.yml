@@ -8,3 +8,4 @@ deploy:
   file: "/home/travis/.m2/repository/ch/bbw/02_ConsoleCalculatorWithMaven/0.0.1-"
   on:
     repo: michel1345/Calculator
+  on.tags: true  
