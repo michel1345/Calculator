@@ -60,10 +60,10 @@ public class CalculatorTest {
 	}
 
 	// Subtraktion
-	@Test
+	/*@Test
 	public void testSubtraktionZweiPositiveIsOk() {
 		assertTrue(testee.subtraction(30, 10) == 20);
-	}
+	}*/
 
 	@Test
 	public void testSubtraktionZweiNegativeIsOk() {
@@ -108,10 +108,10 @@ public class CalculatorTest {
 	}
 
 	// Multiplikation
-	@Test
+	/*@Test
 	public void testMultiplikationZweiPositiveIsOk() {
 		assertTrue(testee.multiplikation(10, 10) == 100);
-	}
+	}*/
 
 	@Test
 	public void testMultiplikationZweiNegativeIsOk() {
@@ -162,10 +162,10 @@ public class CalculatorTest {
 	}*/
 
 	// Division
-	@Test
+	/*@Test
 	public void testDivisionZweiPositiveIsOk() {
 		assertTrue(testee.division(50, 10) == 5);
-	}
+	}*/
 
 	@Test
 	public void testDivisionZweiNegativeIsOk() {
